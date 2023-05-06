@@ -35,7 +35,13 @@ function submitHandle(event){
     </tr>`);
 }
 
-console.log(employeeInfo.annualSalary);
+function totalSalary(){
+    salary = Number($('#Salary')).val();
+    monthlyCost += salary
+    if (monthlyCost<20000){
+        
+    }
+}
 
 function handleDelete() {
     $(this).parent().parent().remove();
