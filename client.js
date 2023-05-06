@@ -3,12 +3,13 @@ console.log('hi');
 $(document).ready(onReady);
 
 function onReady(){
+    let submitButton = $('#submit-button').val();
 //handleSubmit on click button stuff
 
 //change the onclick to submit if things are in the html forms 
 
 
-
+}
 function handleSubmit(event){
     console.log('These are things to do');
     event.preventDefault(); 
@@ -37,10 +38,11 @@ function
 
 */
 
-}
 
 
-function handleSubmit(event){
 
 
+
+function handleDelete() {
+    $(this).parent().parent().remove();
 }
