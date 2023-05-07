@@ -45,10 +45,8 @@ $('#monthlyTotal').text(monthlyExpense);
 if(monthlyExpense>20000){
 $('footer').css('background-color','red');
 
+    }
 }
-}
-
-
 
 function handleDelete() {
     $(this).parent().parent().remove();

@@ -31,10 +31,9 @@ footer {
   display: flex;
   justify-content: right;
   align-items: right;
-  background-color: greenyellow;
+  background-color: green;
   text-align: right;
  
-  
   
 }
 h1{
@@ -52,7 +51,6 @@ h1 {
   font-size: 2.5em;
 }
 
-/* ADD AFFIRMATION FORM */
 input {
   padding: .5em;
   width: 150px;
@@ -64,7 +62,6 @@ button {
   width: 75px;
 }
 
-/* AFFIRMATIONS TABLE */
 table {
   width: 100%;
   text-align: left;
