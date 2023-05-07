@@ -2,8 +2,10 @@ console.log('hi');
 
 $(document).ready(onReady);
 
+let monthlyExpense =0;
+
 function onReady(){
-    let submitButton = $('#submit-button').val();
+
     $('#form-input').on('submit', submitHandle);
     $('#table-input').on('click', '.delete-btn', handleDelete)
 //handleSubmit on click button stuff
@@ -14,8 +16,7 @@ function onReady(){
 //When adding the annual salaries together make sure to divide by 12 and then to round the averages so it looks good 
 //use like .math or something
 function submitHandle(event){
-    let employeeInfo=[];
-
+ 
     console.log('These are things to do');
     event.preventDefault(); 
 
@@ -23,7 +24,8 @@ function submitHandle(event){
     let lastName = $('#last-name').val();
     let idNumber = $('#ID').val();
     let jobTitle = $('#job-title').val();
-    let annualSalary = $('#annual-salary').val();
+    let annualSalary = Number($('#annual-salary').val());
+    updateTotal(annualSalary)
 
     $('#table-input').append(`<tr>
     <td>${firstName}</td>
@@ -35,13 +37,18 @@ function submitHandle(event){
     </tr>`);
 }
 
-function totalSalary(){
-    salary = Number($('#Salary')).val();
-    monthlyCost += salary
-    if (monthlyCost<20000){
-        
-    }
+function updateTotal(money){
+ monthlyExpense += money/12;
+ console.log(monthlyExpense);
+$('#monthlyTotal').text(monthlyExpense);
+
+if(monthlyExpense>20000){
+$('footer').css('background-color','red');
+
 }
+}
+
+
 
 function handleDelete() {
     $(this).parent().parent().remove();
