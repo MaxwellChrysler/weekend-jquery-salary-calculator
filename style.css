@@ -1,9 +1,9 @@
 /* GLOBAL TYPOGRAPHY STYLES */
 body {
   background-color: #dcdcdc;
-  font-family: 'Roboto', sans-serif;
-  color: #313131;
-  font-size: 1.25em;
+  font-family: 'times new roman', sans-serif;
+  color: #5a55b3;
+  font-size: 1.35em;
 }
 
   
@@ -29,10 +29,13 @@ main {
 footer {
   height: 100%;
   display: flex;
+  padding: 10px;
   justify-content: right;
   align-items: right;
+  color: white;
   background-color: green;
   text-align: right;
+  border-bottom: 1px black;
  
   
 }
@@ -55,7 +58,7 @@ input {
   padding: .5em;
   width: 150px;
   background: #FCFCFC;
-  border: 1px solid;
+  border: 2px solid;
 }
 button {
   padding: .5em;
@@ -67,7 +70,7 @@ table {
   text-align: left;
 }
 table, th, td {
-  border: 1px solid black;
+  border: 2px solid black;
   border-collapse: collapse;
   height: 2.15em;
 }
@@ -75,13 +78,12 @@ th, td {
   padding: .5em;
   min-width: 3.5em;
 }
-thead {
-  background: #7a7a7a;
-  color: #fcfcfc;
+thead tr:nth-child(odd) {
+  background: #5a55b3;
+  color: #fcfcfc;  
 }
-tbody tr:nth-child(odd){ 
-  background: #fcfcfc;
+thead tr:nth-child(even){
+  background-color: #8985cb;
+  color:#fcfcfc;
 }
-tbody tr:nth-child(even){
-  background: #dcdcdc;
-}
+
